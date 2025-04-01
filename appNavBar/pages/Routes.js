@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Home from '../pages/Home';
-import Alerta from '../pages/Alerta';
+import Alerta from './Playlist';
 import Usuarios from '../pages/Usuarios';
 
 const Tab = createBottomTabNavigator();
@@ -13,7 +13,7 @@ export default function Routes() {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: '#b94646',
+        tabBarActiveTintColor: 'white',
       }}
     >
       <Tab.Screen
@@ -31,9 +31,9 @@ export default function Routes() {
         name="Alerta"
         component={Alerta}
         options={{
-          tabBarLabel: 'Alerta',
+          tabBarLabel: 'Playlists',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={size} />
+            <MaterialCommunityIcons name="music" color={color} size={size} />
           ),
         }}
       />
@@ -42,7 +42,7 @@ export default function Routes() {
         name="Usuarios"
         component={Usuarios}
         options={{
-          tabBarLabel: 'Usuários',
+          tabBarLabel: 'Perfil',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
