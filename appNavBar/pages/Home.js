@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, ScrollView } from 'react-native';
 
 export default function Home() {
   return (
@@ -13,27 +13,25 @@ export default function Home() {
         Seus artistas favoritos
       </Text>
 
+      {/* View para os artistas favoritos*/}
       <View style={estilo.artistas}>
 
-        <View>
-          <Image source={require('../assets/brunomars.jpg')}
-            style={{ width: 110, height: 110, borderRadius: 10 }} />
+        <View style={estilo.musicView}>
+          <Image source={require('../assets/brunomars.jpg')} style={estilo.musicImage} />
           <Text style={estilo.musictitle}>
             Bruno Mars
           </Text>
         </View>
 
-        <View style={estilo.marginL}>
-          <Image source={require('../assets/conangay.jpg')}
-            style={{ width: 110, height: 110, borderRadius: 10}} />
+        <View style={estilo.musicView}>
+          <Image source={require('../assets/conangay.jpg')} style={estilo.musicImage} />
           <Text style={estilo.musictitle}>
             Conan Grey
           </Text>
         </View>
 
-        <View style={estilo.marginL}> 
-          <Image source={require('../assets/fabgodamn.jpg')}
-            style={{ width: 110, height: 110, borderRadius: 10}} />
+        <View style={estilo.musicView}>
+          <Image source={require('../assets/fabgodamn.jpg')} style={estilo.musicImage} />
           <Text style={estilo.musictitle}>
             Fab Godamn
           </Text>
@@ -45,61 +43,104 @@ export default function Home() {
         Recomendados
       </Text>
 
-      <View style={estilo.artistas}>
+      {/* View para os Recomendados */}
+      <ScrollView horizontal={true}>
+        <View style={estilo.artistas}>
 
-        <View>
-          <Image source={require('../assets/matue4.webp')}
-            style={{ width: 110, height: 110, borderRadius: 10 }} />
-          <Text style={estilo.musictitle}>
-            Matuê
-          </Text>
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/matue4.webp')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Matuê
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/slipknot.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Slipknot
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/charlie.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Charlie Brown Jr.
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/korn.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              KoЯn
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/metallica.png')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Metallica
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/luan.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Luan Santana
+            </Text>
+          </View>
         </View>
+      </ScrollView>
 
-        <View style={estilo.marginL}>
-          <Image source={require('../assets/slipknot.jpg')}
-            style={{ width: 110, height: 110, borderRadius: 10}} />
-          <Text style={estilo.musictitle}>
-            Slipknot
-          </Text>
+      <Text style={estilo.subtitle}>
+        Mais Escutados no Brasil
+      </Text>
+
+      <ScrollView horizontal={true}>
+        <View style={estilo.artistas}>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/matue4.webp')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Matuê
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/slipknot.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Slipknot
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/charlie.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Charlie Brown Jr.
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/korn.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              KoЯn
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/metallica.png')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Metallica
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/luan.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Luan Santana
+            </Text>
+          </View>
         </View>
-
-        <View style={estilo.marginL}> 
-          <Image source={require('../assets/charlie.jpg')}
-            style={{ width: 110, height: 110, borderRadius: 10}} />
-          <Text style={estilo.musictitle}>
-            Charlie Brown Jr.
-          </Text>
-        </View>
-
-      </View>
-
-      <View style={estilo.artistas}>
-
-        <View>
-          <Image source={require('../assets/korn.jpg')}
-            style={{ width: 110, height: 110, borderRadius: 10 }} />
-          <Text style={estilo.musictitle}>
-            KoЯn
-          </Text>
-        </View>
-
-        <View style={estilo.marginL}>
-          <Image source={require('../assets/metallica.png')}
-            style={{ width: 110, height: 110, borderRadius: 10}} />
-          <Text style={estilo.musictitle}>
-            Metallica
-          </Text>
-        </View>
-
-        <View style={estilo.marginL}> 
-          <Image source={require('../assets/luan.jpg')}
-            style={{ width: 110, height: 110, borderRadius: 10}} />
-          <Text style={estilo.musictitle}>
-            Luan Santana
-          </Text>
-        </View>
-
-      </View>
+      </ScrollView>
 
     </View>
   );
@@ -131,14 +172,20 @@ const estilo = StyleSheet.create({
     marginTop: 15,
     marginLeft: 10,
     flexDirection: 'row',
+    marginBottom: -10
   },
   musictitle: {
     color: 'white',
     marginTop: 4
-
   },
-  marginL: {
-    marginLeft: 14.5
-  }
-
+  musicImage: {
+    width: 110,
+    height: 110,
+    borderRadius: 10,
+  },
+  musicView: {
+    marginRight: 15,
+    flex: 1,
+    position: 'relative'
+  },
 });

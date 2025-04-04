@@ -1,39 +1,133 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, ScrollView } from 'react-native';
 
 export default function Playlist() {
   return (
     <View style={estilo.container}>
+      <ScrollView>
 
-      <Text style={estilo.titulo}>
-        Playlists
-      </Text>
-
-
-      <View style={{ alignSelf: 'center', alignItems: 'center' }}>
-        <Text style={estilo.subtitle}>
-          Favoritas
+        <Text style={estilo.titulo}>
+          Playlists
         </Text>
-        <Image source={require('../assets/estrela.png')}
-          style={{ width: 220, height: 220, marginTop: 10 }} />
-      </View>
 
-      <View style={estilo.linha}></View>
-
-      <View style={estilo.musicView}>
-        <View>
-          <Text style={estilo.musictitle}>
-            Coelinho
+        {/* View para a estrela e o título da playlist */}
+        <View style={{ alignSelf: 'center', alignItems: 'center' }}>
+          <Text style={estilo.subtitle}>
+            Favoritas
           </Text>
-          <Text style={estilo.musicsubtitle}>
-            Saia Rodada
-          </Text>
+          <Image source={require('../assets/estrela.png')}
+            style={{ width: 220, height: 220, marginTop: 10 }} />
         </View>
-        <Image source={require('../assets/dot.jpg')}
-          style={{ width: 40, height: 70 }} />
-      </View>
 
+        {/* Linha divisória da imagem para as músicas*/}
+        <View style={estilo.linha}></View> 
 
+        {/* Views para as músicas*/}
+        <View style={estilo.musicView}>
+          <View>
+            <Text style={estilo.musictitle}>
+              Coelinho
+            </Text>
+            <Text style={estilo.musicsubtitle}>
+              Saia Rodada
+            </Text>
+          </View>
+          <Image source={require('../assets/dot.jpg')}
+            style={{ width: 40, height: 70 }} />
+        </View>
+
+        <View style={estilo.musicView}>
+          <View>
+            <Text style={estilo.musictitle}>
+              Só os Loucos Sabem
+            </Text>
+            <Text style={estilo.musicsubtitle}>
+              Charlie Brown Jr.
+            </Text>
+          </View>
+          <Image source={require('../assets/dot.jpg')}
+            style={{ width: 40, height: 70 }} />
+        </View>
+
+        <View style={estilo.musicView}>
+          <View>
+            <Text style={estilo.musictitle}>
+              Dias de luta, dias de gloria
+            </Text>
+            <Text style={estilo.musicsubtitle}>
+              Charlie Brown Jr.
+            </Text>
+          </View>
+          <Image source={require('../assets/dot.jpg')}
+            style={{ width: 40, height: 70 }} />
+        </View>
+
+        <View style={estilo.musicView}>
+          <View>
+            <Text style={estilo.musictitle}>
+              Enter Sandman
+            </Text>
+            <Text style={estilo.musicsubtitle}>
+              Metallica
+            </Text>
+          </View>
+          <Image source={require('../assets/dot.jpg')}
+            style={{ width: 40, height: 70 }} />
+        </View>
+
+        <View style={estilo.musicView}>
+          <View>
+            <Text style={estilo.musictitle}>
+              Coração cigano
+            </Text>
+            <Text style={estilo.musicsubtitle}>
+              Luan Santana
+            </Text>
+          </View>
+          <Image source={require('../assets/dot.jpg')}
+            style={{ width: 40, height: 70 }} />
+        </View>
+
+        <View style={estilo.musicView}>
+          <View>
+            <Text style={estilo.musictitle}>
+              Coelinho
+            </Text>
+            <Text style={estilo.musicsubtitle}>
+              Saia Rodada
+            </Text>
+          </View>
+          <Image source={require('../assets/dot.jpg')}
+            style={{ width: 40, height: 70 }} />
+        </View>
+
+        <View style={estilo.musicView}>
+          <View>
+            <Text style={estilo.musictitle}>
+              É Sal
+            </Text>
+            <Text style={estilo.musicsubtitle}>
+              Matuê
+            </Text>
+          </View>
+          <Image source={require('../assets/dot.jpg')}
+            style={{ width: 40, height: 70 }} />
+        </View>
+
+        <View style={estilo.musicView}>
+          <View>
+            <Text style={estilo.musictitle}>
+              Duality
+            </Text>
+            <Text style={estilo.musicsubtitle}>
+              Slipknot
+            </Text>
+          </View>
+          <Image source={require('../assets/dot.jpg')}
+            style={{ width: 40, height: 70 }} />
+        </View>
+
+      </ScrollView>
     </View>
   );
 }
@@ -86,7 +180,6 @@ const estilo = StyleSheet.create({
   },
   musicView: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
-
+    justifyContent: 'space-between',
+  },
 });
