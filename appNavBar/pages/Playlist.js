@@ -145,7 +145,6 @@ const estilo = StyleSheet.create({
     fontWeight: 800,
     color: 'white',
     letterSpacing: 5,
-    fontFamily: 'Roboto'
   },
   subtitle: {
     color: 'white',

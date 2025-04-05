@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Home from '../pages/Home';
 import Alerta from './Playlist';
-import Usuarios from '../pages/Usuarios';
+import Perfil from '../pages/Perfil';
 
 const Tab = createBottomTabNavigator();
 
@@ -39,8 +39,8 @@ export default function Routes() {
       />
 
       <Tab.Screen
-        name="Usuarios"
-        component={Usuarios}
+        name="Perfil"
+        component={Perfil}
         options={{
           tabBarLabel: 'Perfil',
           tabBarIcon: ({ color, size }) => (

@@ -14,30 +14,31 @@ export default function Home() {
       </Text>
 
       {/* View para os artistas favoritos*/}
-      <View style={estilo.artistas}>
+      <ScrollView horizontal={true}>
+        <View style={estilo.artistas}>
 
-        <View style={estilo.musicView}>
-          <Image source={require('../assets/brunomars.jpg')} style={estilo.musicImage} />
-          <Text style={estilo.musictitle}>
-            Bruno Mars
-          </Text>
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/brunomars.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Bruno Mars
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/conangay.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Conan Grey
+            </Text>
+          </View>
+
+          <View style={estilo.musicView}>
+            <Image source={require('../assets/fabgodamn.jpg')} style={estilo.musicImage} />
+            <Text style={estilo.musictitle}>
+              Fab Godamn
+            </Text>
+          </View>
         </View>
-
-        <View style={estilo.musicView}>
-          <Image source={require('../assets/conangay.jpg')} style={estilo.musicImage} />
-          <Text style={estilo.musictitle}>
-            Conan Grey
-          </Text>
-        </View>
-
-        <View style={estilo.musicView}>
-          <Image source={require('../assets/fabgodamn.jpg')} style={estilo.musicImage} />
-          <Text style={estilo.musictitle}>
-            Fab Godamn
-          </Text>
-        </View>
-
-      </View>
+      </ScrollView>
 
       <Text style={estilo.subtitle}>
         Recomendados
@@ -95,48 +96,49 @@ export default function Home() {
         Mais Escutados no Brasil
       </Text>
 
+      {/* View para os mais escutados no Braisil */}
       <ScrollView horizontal={true}>
         <View style={estilo.artistas}>
 
           <View style={estilo.musicView}>
-            <Image source={require('../assets/matue4.webp')} style={estilo.musicImage} />
+            <Image source={require('../assets/nicky.jpg')} style={estilo.musicImage} />
             <Text style={estilo.musictitle}>
-              Matuê
+              Nicky Jam
             </Text>
           </View>
 
           <View style={estilo.musicView}>
-            <Image source={require('../assets/slipknot.jpg')} style={estilo.musicImage} />
+            <Image source={require('../assets/system.jpg')} style={estilo.musicImage} />
             <Text style={estilo.musictitle}>
-              Slipknot
+              System of a Down
             </Text>
           </View>
 
           <View style={estilo.musicView}>
-            <Image source={require('../assets/charlie.jpg')} style={estilo.musicImage} />
+            <Image source={require('../assets/luqi.jpg')} style={estilo.musicImage} />
             <Text style={estilo.musictitle}>
-              Charlie Brown Jr.
+              D$ Luqi
             </Text>
           </View>
 
           <View style={estilo.musicView}>
-            <Image source={require('../assets/korn.jpg')} style={estilo.musicImage} />
+            <Image source={require('../assets/pagode.jpg')} style={estilo.musicImage} />
             <Text style={estilo.musictitle}>
-              KoЯn
+              Turma do Pagode
             </Text>
           </View>
 
           <View style={estilo.musicView}>
-            <Image source={require('../assets/metallica.png')} style={estilo.musicImage} />
+            <Image source={require('../assets/juice.jpg')} style={estilo.musicImage} />
             <Text style={estilo.musictitle}>
-              Metallica
+              Juice WRLD
             </Text>
           </View>
 
           <View style={estilo.musicView}>
-            <Image source={require('../assets/luan.jpg')} style={estilo.musicImage} />
+            <Image source={require('../assets/wu.jpg')} style={estilo.musicImage} />
             <Text style={estilo.musictitle}>
-              Luan Santana
+              Wu-Tang Clan
             </Text>
           </View>
         </View>
@@ -159,7 +161,6 @@ const estilo = StyleSheet.create({
     fontWeight: 800,
     color: 'white',
     letterSpacing: 5,
-    fontFamily: 'Roboto'
   },
   subtitle: {
     color: 'white',
@@ -172,7 +173,7 @@ const estilo = StyleSheet.create({
     marginTop: 15,
     marginLeft: 10,
     flexDirection: 'row',
-    marginBottom: -10
+    justifyContent: 'center'
   },
   musictitle: {
     color: 'white',
@@ -185,7 +186,5 @@ const estilo = StyleSheet.create({
   },
   musicView: {
     marginRight: 15,
-    flex: 1,
-    position: 'relative'
   },
 });
